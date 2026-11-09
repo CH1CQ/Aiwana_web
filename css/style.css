@@ -404,9 +404,10 @@ html.mnu-lock .phdr-logo{filter:brightness(.6)} /* v3.49：メニューが開い
 .pc-top{transition:scale .3s var(--ease)}
 .pc-top:hover{scale:var(--hs)}
 }
+/* 動きを減らす設定（OSの「視差効果を減らす」）：飾りの動き（出現・泡・魚のふよふよ）は止める。
+   メニューの出入り・幕・三本線の変形（0.3〜0.5秒）は v3.51 から残す（ご主人様 2026-11-09「イでお願い」。iPad mini でこの設定が有効でメニューが一瞬で出ていた）。Case の固定（JS）は止めたまま */
 @media (prefers-reduced-motion: reduce){
 .reveal,.hero-bub{animation:none !important}
-.mnu,.mnu-base,.mnu-sheet,.burger span{transition-duration:0s !important;transition-delay:0s !important}
 .fy{animation-name:fy-soft}.fy-star{animation-name:fystar-soft}
 }
 @keyframes fy-soft{from{transform:translateY(-3px)}to{transform:translateY(3px)}}
