@@ -1,0 +1,317 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>アイワナ公式サイト</title>
+<meta name="version" content="v3.45 2026-11-09">
+<meta name="description" content="アイワナは、気になったものを保存し、決めた日に通知が届くiPhoneアプリです。">
+<!-- OGP v3.45：SNSやチャットにURLを貼ったときのカード。公開版：og:url と og:image は GitHub Pages のURL。画像は img/ogp.png（1200×630・案B＝魚＋コピー＋ロゴ） -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="アイワナ公式サイト">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="アイワナ｜あなたの「欲しい」をちょっと寝かせる">
+<meta property="og:description" content="アイワナは、気になったものを保存し、決めた日に通知が届くiPhoneアプリです。">
+<meta property="og:url" content="https://ch1cq.github.io/Aiwana_web/">
+<meta property="og:image" content="https://ch1cq.github.io/Aiwana_web/img/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="img/app-icon.png">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=3.45">
+</head>
+<body>
+<div class="page">
+<!-- ヘッダー（スマホ幅）：白＝ロゴ＋メニュー／黄＝アプリアイコン＋名前＋ダウンロード。出ている方が上へ引っ込んでから次が上から出る -->
+<header class="hdr hdr-w on">
+ <div class="in hdr-in">
+  <a class="hdr-logo" href="#top" aria-label="アイワナ公式サイトのトップへ"><img src="img/logo.png" alt="アイワナ"></a>
+  <button class="burger" type="button" aria-label="メニューを開く" aria-expanded="false" data-open-menu><span></span><span></span><span></span></button>
+ </div>
+</header>
+<header class="hdr hdr-y" aria-hidden="true">
+ <div class="in hdr-in">
+  <a class="hdr-app" href="#top" tabindex="-1"><img src="img/app-icon.png" alt="">アイワナ</a>
+  <a class="hdr-dl" href="https://apps.apple.com/app/id6790331914" tabindex="-1">アプリをダウンロード</a>
+ </div>
+</header>
+<!-- ヘッダー（PC幅・みんなの銀行）：画面の幅いっぱい・背景なし。下へスクロールで隠れ、上へで出る -->
+<div class="phdr">
+ <a class="phdr-logo" href="#top" aria-label="アイワナ公式サイトのトップへ"><img src="img/logo.png" alt="アイワナ"></a>
+ <button class="burger phdr-burger" type="button" aria-label="メニューを開く" aria-expanded="false" data-open-menu><span></span><span></span><span></span><i class="bub"></i></button> <!-- v3.37：丸の周りに泡3つ（::before・::after・i.bub） -->
+</div>
+<!-- PC幅の背景：薄青の水槽。アロワナが左右から泳いで入ってくる -->
+<div class="bg-layer" aria-hidden="true">
+ <img class="bg-plant" src="img/bg-plant.png" alt="" width="440" height="1402"> <!-- v3.37：水草（アセット47→v3.40でアセット48に。線が細い方）。PC幅の左下に固定。v3.39：1280px未満は本体と一緒に左へ動いて画面の外へ -->
+</div>
+<div class="layout">
+<!-- 左（PC幅だけ）v3.28〜：ADAYの構成。画面に固定した面に、魚（その場でふよふよ・口から泡）・キャッチコピー・ロゴ・QR。下にFOLLOW US -->
+<aside class="side" aria-label="アイワナについて">
+ <div class="side-stack">
+  <div class="hero">
+   <div class="hero-fish fy"><img src="img/bg-arowana-1.png" alt="" width="519" height="204"><i class="hero-bub"></i><i class="hero-bub"></i><i class="hero-bub"></i></div>
+   <p class="hero-copy">あなたの「欲しい」をちょっと寝かせる</p>
+   <img class="hero-logo" src="img/logo.png" alt="アイワナ" width="302" height="114">
+   <img class="hero-qr" src="img/qr-appstore.png" alt="App Storeのアイワナのページを開くQRコード" width="400" height="400">
+   <p class="hero-note">iPhone専用（iOS 18以降）・無料</p>
+  </div>
+  <a class="hero-x" href="https://x.com/aiwana_app" aria-label="公式X（@aiwana_app）"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16"><path d="M12.6 .75h2.454L9.694 6.892 16 15.25h-4.937L7.196 10.18 2.771 15.25H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.6.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" fill="currentColor"></path></svg></a>
+  <nav class="hero-links" aria-label="サポートと規約"><a href="support.html" data-goto>サポート</a><a href="privacy.html" data-goto>プライバシーポリシー</a><a href="https://docs.google.com/forms/d/e/1FAIpQLSeYzxMm0aLARxkDsGyXCwRQ1I5td704eaObtqfq3ke3TdoxKg/viewform">お問い合わせ</a><a href="terms.html" data-goto>利用規約</a></nav>
+ </div>
+</aside>
+<main class="col">
+
+<!-- KV（Figma 139:1064）：スマホ幅は390px基準で端末幅に比例。PC幅は左に文言・右にイラスト -->
+<section class="fv" id="top" aria-label="メインビジュアル">
+ <div class="kv-wrap">
+  <div class="kv">
+   <h1 class="rv rv-kv">あなたの「欲しい」を<br>ちょっと寝かせる</h1>
+   <div class="kv-art rv rv-kv rv-kv2" aria-hidden="true">
+<div class="kv-abs " style="left: calc(var(--u) * 223); top: calc(var(--u) * 85.87); width: calc(var(--u) * 153.996); height: calc(var(--u) * 291.261)"><div class="kv-center"><div style="flex: none; transform: rotate(5deg); width: calc(var(--u) * 130); height: calc(var(--u) * 281); position: relative"><div style="position: absolute; inset: 0; overflow: hidden"><img src="img/kv-phone-right.webp" alt="" style="position: absolute; left: 0; top: 0.64%; width: 100%; height: 98.95%; max-width: none"></div></div></div></div>
+<div class="kv-abs " style="left: calc(var(--u) * 15); top: calc(var(--u) * 85.87); width: calc(var(--u) * 153.996); height: calc(var(--u) * 291.261)"><div class="kv-center"><div style="flex: none; transform: rotate(-5deg); width: calc(var(--u) * 130); height: calc(var(--u) * 281); position: relative"><div style="position: absolute; inset: 0; overflow: hidden"><img src="img/kv-phone-left.webp" alt="" style="position: absolute; left: 0; top: 0.64%; width: 100%; height: 98.95%; max-width: none"></div></div></div></div>
+<div class="kv-abs" style="left: calc(var(--u) * 108.999); top: calc(var(--u) * 22); width: calc(var(--u) * 173); height: calc(var(--u) * 368)"><img src="img/kv-phone-home.webp" alt="アイワナのホーム画面" style="width: 100%; height: 100%; object-fit: cover"></div>
+<div class="kv-abs fy fy-1" style="left: calc(var(--u) * -2.001); top: calc(var(--u) * 287.997); width: calc(var(--u) * 145.681); height: calc(var(--u) * 127.097)"><div class="kv-center"><div style="flex: none; transform: rotate(168.68deg) scaleY(-1); width: calc(var(--u) * 127.746); height: calc(var(--u) * 104.053); position: relative"><img src="img/kv-fish-heart.png" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></div></div></div>
+<div class="kv-abs fy fy-2" style="left: calc(var(--u) * 283.85); top: calc(var(--u) * 25.33); width: calc(var(--u) * 96.484); height: calc(var(--u) * 65.494)"><div class="kv-center" style="position: absolute; left: calc(var(--u) * 0.007); top: calc(var(--u) * 0.019); width: calc(var(--u) * 96.484); height: calc(var(--u) * 65.454)"><div style="flex: none; transform: rotate(-21.29deg); width: calc(var(--u) * 89.741); height: calc(var(--u) * 35.274); position: relative"><div style="position: absolute; inset: 0; overflow: hidden"><img src="img/kv-fish-heart.png" alt="" style="position: absolute; left: -28.48%; top: -166.41%; width: 128.48%; height: 266.69%; max-width: none"></div></div></div><div class="kv-center" style="position: absolute; left: calc(var(--u) * 15.16); top: calc(var(--u) * 32.18); width: calc(var(--u) * 2.163); height: calc(var(--u) * 1.868)"><div style="flex: none; transform: rotate(-21.29deg); width: calc(var(--u) * 1.816); height: calc(var(--u) * 1.297); position: relative"><div style="position: absolute; inset: -77.12% -55.08%"><img src="img/kv-fish-line.svg" alt="" style="display: block; width: 100%; height: 100%"></div></div></div></div>
+<div class="kv-abs fy fy-3" style="left: calc(var(--u) * 7.35); top: calc(var(--u) * 12); width: calc(var(--u) * 120.243); height: calc(var(--u) * 179.295)"><div class="kv-center"><div style="flex: none; transform: rotate(-5.42deg); width: calc(var(--u) * 104.63); height: calc(var(--u) * 170.169); position: relative"><img src="img/kv-man.png" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></div></div></div>
+<div class="kv-abs fy fy-4" style="left: calc(var(--u) * 259.2); top: calc(var(--u) * 239.84); width: calc(var(--u) * 124.157); height: calc(var(--u) * 170.401)"><div class="kv-center"><div style="flex: none; transform: rotate(3.64deg); width: calc(var(--u) * 114); height: calc(var(--u) * 163.489); position: relative"><img src="img/kv-woman.png" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></div></div></div>
+<div class="kv-abs fy-star fy-s1" style="left: calc(var(--u) * 18.0); top: calc(var(--u) * 311.833); width: calc(var(--u) * 37.333); height: calc(var(--u) * 38.333)"><img src="img/kv-star-1.png" alt="" style="display: block; width: 100%; height: 100%"></div>
+<div class="kv-abs fy-star fy-s2" style="left: calc(var(--u) * 347.167); top: calc(var(--u) * 78.5); width: calc(var(--u) * 26.667); height: calc(var(--u) * 27.667)"><img src="img/kv-star-2.png" alt="" style="display: block; width: 100%; height: 100%"></div>
+<div class="kv-abs fy-star fy-s3" style="left: calc(var(--u) * 344.5); top: calc(var(--u) * 121.167); width: calc(var(--u) * 16.667); height: calc(var(--u) * 17.333)"><img src="img/kv-star-3.png" alt="" style="display: block; width: 100%; height: 100%"></div>
+<div class="kv-abs fy-star fy-s4" style="left: calc(var(--u) * 288.5); top: calc(var(--u) * 11.667); width: calc(var(--u) * 25.667); height: calc(var(--u) * 25.667)"><img src="img/kv-star-4.png" alt="" style="display: block; width: 100%; height: 100%"></div>
+<div class="kv-abs fy-star fy-s5" style="left: calc(var(--u) * 96.333); top: calc(var(--u) * 395.0); width: calc(var(--u) * 26.667); height: calc(var(--u) * 26.667)"><img src="img/kv-star-5.png" alt="" style="display: block; width: 100%; height: 100%"></div>
+<div class="kv-abs fy-star fy-s6" style="left: calc(var(--u) * 43.167); top: calc(var(--u) * 282.167); width: calc(var(--u) * 18.667); height: calc(var(--u) * 18.667)"><img src="img/kv-star-6.png" alt="" style="display: block; width: 100%; height: 100%"></div>
+   </div>
+   <a class="dl-btn rv rv-kv rv-kv3" href="https://apps.apple.com/app/id6790331914">アプリをダウンロード</a>
+   <p class="kv-note rv rv-kv rv-kv3">iPhone専用（iOS 18以降）・無料</p>
+  </div>
+ </div>
+</section>
+
+<div class="sep" aria-hidden="true" style="background: #ffffff"><svg class="wave" viewBox="14 0 390 24" preserveAspectRatio="none" width="100%" height="24"><path d="M0 13.5C0 13.5 31.31 1.5 52.375 1.5C73.44 1.5 83.69 13.5 104.75 13.5C125.81 13.5 136.06 1.5 157.125 1.5C178.19 1.5 188.44 13.5 209.5 13.5C230.56 13.5 240.81 1.5 261.875 1.5C282.94 1.5 293.19 13.5 314.25 13.5C335.31 13.5 345.56 1.5 366.625 1.5C387.69 1.5 419 13.5 419 13.5 V24 H0 Z" fill="#ffbd00"></path><path d="M0 13.5C0 13.5 31.31 1.5 52.375 1.5C73.44 1.5 83.69 13.5 104.75 13.5C125.81 13.5 136.06 1.5 157.125 1.5C178.19 1.5 188.44 13.5 209.5 13.5C230.56 13.5 240.81 1.5 261.875 1.5C282.94 1.5 293.19 13.5 314.25 13.5C335.31 13.5 345.56 1.5 366.625 1.5C387.69 1.5 419 13.5 419 13.5" fill="none" stroke="#2e2e2e" stroke-width="3" vector-effect="non-scaling-stroke"></path></svg></div>
+<!-- About（黄色。上下とも波） -->
+<section id="about" class="sec about">
+ <div class="in about-grid rv">
+  <div class="about-text">
+   <p class="eyebrow"><i style="background: #ffffff"></i>About</p>
+   <h2 class="h2"><span class="hl">アイワナ</span>ってどんなアプリ？</h2>
+   <p class="lead">アイワナは、気になったものを保存し、決めた日に通知が届くアプリです。すぐには決められないもの、セールや申し込みの期限があるもの。どちらも<strong>「いつ考えるか」を先に決めて</strong>、保存しておけます。</p>
+  </div>
+  <div class="about-card">
+   <img src="img/genre-arowana.png" alt="ジャンルの色で塗り分けられたアロワナと、黄色いアロワナ" style="width: 256px; height: 150px; object-fit: contain">
+   <p>コスメも、推し活グッズも、チケットも<br>気になるものはジャンルで管理</p>
+  </div>
+ </div>
+</section>
+
+<div class="sep" aria-hidden="true" style="background: #ffbd00"><svg class="wave" viewBox="14 0 390 24" preserveAspectRatio="none" width="100%" height="24"><path d="M0 13.5C0 13.5 31.31 1.5 52.375 1.5C73.44 1.5 83.69 13.5 104.75 13.5C125.81 13.5 136.06 1.5 157.125 1.5C178.19 1.5 188.44 13.5 209.5 13.5C230.56 13.5 240.81 1.5 261.875 1.5C282.94 1.5 293.19 13.5 314.25 13.5C335.31 13.5 345.56 1.5 366.625 1.5C387.69 1.5 419 13.5 419 13.5 V24 H0 Z" fill="#f1f3fa"></path><path d="M0 13.5C0 13.5 31.31 1.5 52.375 1.5C73.44 1.5 83.69 13.5 104.75 13.5C125.81 13.5 136.06 1.5 157.125 1.5C178.19 1.5 188.44 13.5 209.5 13.5C230.56 13.5 240.81 1.5 261.875 1.5C282.94 1.5 293.19 13.5 314.25 13.5C335.31 13.5 345.56 1.5 366.625 1.5C387.69 1.5 419 13.5 419 13.5" fill="none" stroke="#2e2e2e" stroke-width="3" vector-effect="non-scaling-stroke"></path></svg></div>
+<!-- Feature（薄青） -->
+<section id="features" class="sec features">
+ <div class="in">
+  <div class="feat-head rv">
+  <div class="sec-head">
+   <p class="eyebrow"><i style="background: #ffbd00"></i>Feature</p>
+   <h2 class="h2">アイワナでできること</h2>
+  </div>
+  <ol class="stepdots" aria-label="使う流れ">
+   <li><span class="sd-dot"><span class="num">1</span></span><span class="sd-label">保存</span></li>
+   <li><span class="sd-dot"><span class="num">2</span></span><span class="sd-label">通知</span></li>
+   <li><span class="sd-dot"><span class="num">3</span></span><span class="sd-label">記録</span></li>
+  </ol>
+  </div>
+  <div class="steps">
+   <div class="step rv">
+    <div class="step-head"><span class="badge"><span class="num">1</span></span><h3>気になるものをアプリに保存</h3></div>
+    <img src="img/feature-save.webp" alt="気になったコスメをアプリに新規追加する女性のイラスト">
+    <p>商品名・価格・個数・ジャンル・チェック日を保存。写真も4枚まで保存できます。</p>
+   </div>
+   <div class="step rv">
+    <div class="step-head"><span class="badge"><span class="num">2</span></span><h3>チェック日に通知でお知らせ</h3></div>
+    <img src="img/feature-notify.webp" alt="ロック画面の8:30にアイワナの通知が届いているイラスト">
+    <p>決めた日に通知が届きます。時刻も指定でき、指定しなければ朝8:30に。通知は1回だけで、何度も届くことはありません。</p>
+   </div>
+   <div class="step rv">
+    <div class="step-head"><span class="badge"><span class="num">3</span></span><h3>あなたの判断を記録</h3></div>
+    <img src="img/feature-record.webp" alt="グラフと金額のレポートを見る女性のイラスト">
+    <p>チェック日に決めたあなたの判断が、月ごとのレポートにまとまります。</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- Case（白の角丸パネル。カードは縦に並べる。PC幅は2列） -->
+<section id="usecases" class="sec case">
+ <div class="case-pin">
+  <div class="in rv">
+   <div class="sec-head">
+    <p class="eyebrow"><i style="background: #ffbd00"></i>Case</p>
+    <h2 class="h2">例えばこんな使い方</h2>
+   </div>
+   <div class="uc-list">
+    <div class="case-bg" aria-hidden="true">
+     <span style="left: 82%; top: 2%; width: 14px; height: 14px"></span><span style="left: 90%; top: 7%; width: 9px; height: 9px"></span><span style="left: 34%; top: 15%; width: 10px; height: 10px"></span><span style="left: 12%; top: 44%; width: 12px; height: 12px"></span><span style="left: 86%; top: 53%; width: 16px; height: 16px"></span><span style="left: 64%; top: 82%; width: 11px; height: 11px"></span><span style="left: 22%; top: 88%; width: 15px; height: 15px"></span><span style="left: 32%; top: 94%; width: 9px; height: 9px"></span>
+    </div>
+    <article class="uc-card uc-1">
+     <div style="display: inline-flex; align-items: baseline; gap: 4px; border-bottom: 1.5px solid #ffbd00; align-self: flex-start">
+      <span class="uc-num" style="font-size: 24px; letter-spacing: .02em; line-height: 1.45">01.</span>
+      <h3 style="margin: 0; font-size: 24px; font-weight: 700; letter-spacing: .02em; line-height: 1.45">あとで見返す</h3>
+     </div>
+     <img src="img/case-01.webp" alt="服を見ながら考える女性のイラスト" style="width: 100%; max-width: 311px; aspect-ratio: 311 / 361; object-fit: cover; margin: 25px auto 0">
+     <p style="margin: 16px 0 0; font-size: 16px; font-weight: 500; line-height: 22px; letter-spacing: .02em">すぐに買えないものもとりあえず保存。余裕があるタイミングでもう一度考えられます。</p>
+    </article>
+    <article class="uc-card uc-2">
+     <div style="display: inline-flex; align-items: baseline; gap: 4px; border-bottom: 1.5px solid #ffbd00; align-self: flex-start">
+      <span class="uc-num" style="font-size: 24px; letter-spacing: .02em; line-height: 1.45">02.</span>
+      <h3 style="margin: 0; font-size: 24px; font-weight: 700; letter-spacing: .02em; line-height: 1.45">そういえば…</h3>
+     </div>
+     <img src="img/case-02.webp" alt="本棚の前で何かを思い出す男性のイラスト" style="width: 100%; max-width: 311px; aspect-ratio: 311 / 361; object-fit: cover; margin: 25px auto 0">
+     <p style="margin: 16px 0 0; font-size: 16px; font-weight: 500; line-height: 22px; letter-spacing: .02em">発売前の商品もチェック日を設定して保存。あの時気になったものを忘れず確認できます。</p>
+    </article>
+    <article class="uc-card uc-3">
+     <div style="display: inline-flex; align-items: baseline; gap: 4px; border-bottom: 1.5px solid #ffbd00; align-self: flex-start">
+      <span class="uc-num" style="font-size: 24px; letter-spacing: .02em; line-height: 1.45">03.</span>
+      <h3 style="margin: 0; font-size: 24px; font-weight: 700; letter-spacing: .02em; line-height: 1.45">じっくり選ぶ</h3>
+     </div>
+     <img src="img/case-03.webp" alt="ソファでセール中の服と靴を見比べる女性のイラスト" style="width: 100%; max-width: 311px; aspect-ratio: 311 / 361; object-fit: cover; margin: 25px auto 0">
+     <p style="margin: 16px 0 0; font-size: 16px; font-weight: 500; line-height: 22px; letter-spacing: .02em">セールや受注生産の終了期限をチェック日に記録。心残りがないようにじっくりと向き合えます。</p>
+    </article>
+    <article class="uc-card uc-4">
+     <div style="display: inline-flex; align-items: baseline; gap: 4px; border-bottom: 1.5px solid #ffbd00; align-self: flex-start">
+      <span class="uc-num" style="font-size: 24px; letter-spacing: .02em; line-height: 1.45">04.</span>
+      <h3 style="margin: 0; font-size: 24px; font-weight: 700; letter-spacing: .02em; line-height: 1.45">申し込みも逃さない</h3>
+     </div>
+     <img src="img/case-04.webp" alt="イベントの掲示を見てスマホを確認する男性のイラスト" style="width: 100%; max-width: 311px; aspect-ratio: 311 / 361; object-fit: cover; margin: 25px auto 0">
+     <p style="margin: 16px 0 0; font-size: 16px; font-weight: 500; line-height: 22px; letter-spacing: .02em">気になるイベント情報を保存。受付が始まる日に合わせて確認できます。</p>
+    </article>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- Security（スレート色の角丸パネル） -->
+<section id="security" class="sec panel security">
+ <div class="in rv">
+  <div class="sec-head">
+   <p class="eyebrow" style="color: #ffffff"><i style="background: #ffbd00"></i>Security</p>
+   <h2 class="h2">アイワナの安心設計</h2>
+  </div>
+  <img class="fishbowl" src="img/security-fishbowl.png" alt="金魚鉢の中を泳ぐアロワナのイラスト">
+  <p class="lead-s">保存した情報は、すべてお使いのiPhoneの中だけに保存されます。外部への送信や、第三者への提供はありません。</p>
+  <div class="safe-grid">
+   <div class="safe-tile"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 26 26" style="flex: none"><circle cx="13" cy="13" r="12" fill="#ffbd00" stroke="#2e2e2e" stroke-width="2"></circle><path d="M8 13.1l3.6 2.9L18 9" fill="none" stroke="#2e2e2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>アカウント<br>登録なし</span></div>
+   <div class="safe-tile"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 26 26" style="flex: none"><circle cx="13" cy="13" r="12" fill="#ffbd00" stroke="#2e2e2e" stroke-width="2"></circle><path d="M8 13.1l3.6 2.9L18 9" fill="none" stroke="#2e2e2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>データは<br>端末の中だけ</span></div>
+   <div class="safe-tile"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 26 26" style="flex: none"><circle cx="13" cy="13" r="12" fill="#ffbd00" stroke="#2e2e2e" stroke-width="2"></circle><path d="M8 13.1l3.6 2.9L18 9" fill="none" stroke="#2e2e2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>アプリ内課金<br>なし</span></div>
+   <div class="safe-tile"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 26 26" style="flex: none"><circle cx="13" cy="13" r="12" fill="#ffbd00" stroke="#2e2e2e" stroke-width="2"></circle><path d="M8 13.1l3.6 2.9L18 9" fill="none" stroke="#2e2e2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>アプリ内広告<br>なし</span></div>
+  </div>
+ </div>
+</section>
+
+<!-- News（薄青の角丸パネル。各カードは記事ページへ） -->
+<section id="news" class="sec panel news">
+ <div class="in rv">
+  <div class="sec-head">
+   <p class="eyebrow"><i style="background: #ffbd00"></i>News</p>
+   <h2 class="h2">最新情報</h2>
+  </div>
+  <div class="news-list">
+   <a class="news-card" href="news-v11.html" data-goto>
+     <span style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+      <span style="display: flex; align-items: center; gap: 8px"><span class="news-tag">Update</span><span class="news-date">2026/09/04</span></span>
+      <span class="news-title">リリースノート　v1.1</span>
+     </span>
+     <span class="chev" aria-hidden="true"><svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="M1 1l6 6-6 6" stroke="#2e2e2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+    </a>
+   <a class="news-card" href="news-launch.html" data-goto>
+     <span style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+      <span style="display: flex; align-items: center; gap: 8px"><span class="news-tag">Launch</span><span class="news-date">2026/08/02</span></span>
+      <span class="news-title">「アイワナ」リリース開始！</span>
+     </span>
+     <span class="chev" aria-hidden="true"><svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="M1 1l6 6-6 6" stroke="#2e2e2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+    </a>
+  </div>
+ </div>
+</section>
+
+<div class="sep" aria-hidden="true" style="background: #f1f3fa"><svg class="wave" viewBox="14 0 390 24" preserveAspectRatio="none" width="100%" height="24"><path d="M0 13.5C0 13.5 31.31 1.5 52.375 1.5C73.44 1.5 83.69 13.5 104.75 13.5C125.81 13.5 136.06 1.5 157.125 1.5C178.19 1.5 188.44 13.5 209.5 13.5C230.56 13.5 240.81 1.5 261.875 1.5C282.94 1.5 293.19 13.5 314.25 13.5C335.31 13.5 345.56 1.5 366.625 1.5C387.69 1.5 419 13.5 419 13.5 V24 H0 Z" fill="#ffbd00"></path><path d="M0 13.5C0 13.5 31.31 1.5 52.375 1.5C73.44 1.5 83.69 13.5 104.75 13.5C125.81 13.5 136.06 1.5 157.125 1.5C178.19 1.5 188.44 13.5 209.5 13.5C230.56 13.5 240.81 1.5 261.875 1.5C282.94 1.5 293.19 13.5 314.25 13.5C335.31 13.5 345.56 1.5 366.625 1.5C387.69 1.5 419 13.5 419 13.5" fill="none" stroke="#2e2e2e" stroke-width="3" vector-effect="non-scaling-stroke"></path></svg></div>
+<!-- Download -->
+<section id="download" class="sec dl-sec">
+ <div class="in rv">
+  <div class="dl-head">
+   <h2 class="dl-title">さっそくアイワナを始めよう！</h2>
+   <svg aria-hidden="true" width="295" height="4" viewBox="0 0 295 4" style="margin-top: 2px; max-width: 100%"><line x1="2" y1="2" x2="293" y2="2" stroke="#ffffff" stroke-width="4" stroke-dasharray="5 10" stroke-linecap="round"></line></svg>
+  </div>
+  <div class="dl-app">
+   <img src="img/app-icon.png" alt="アイワナのアプリアイコン">
+   <p>アイワナ｜ 購入検討記録</p>
+  </div>
+  <img class="dl-mascot" src="img/mascot-heart.webp" alt="ハートの吹き出しとアロワナのマスコット">
+  <div class="dl-cta">
+   <a href="https://apps.apple.com/app/id6790331914" class="dl-btn">今すぐアプリをダウンロード</a>
+  </div>
+  <div class="notice">
+   <p class="notice-h"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2e2e2e" stroke-width="2.4" stroke-linecap="round" style="flex: none"><circle cx="12" cy="12" r="9.5"></circle><path d="M12 7.5v6M12 16.6v.1"></path></svg>ご利用前に</p>
+     <ul class="dev-row" aria-label="対応機種">
+      <li class="ok"><svg aria-hidden="true" width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#2e2e2e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="3.5" width="16" height="29" rx="4" fill="#ffffff"></rect><path d="M15.5 7h5"></path></svg><span>iPhone</span><svg class="mk" aria-label="対応" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#ffbd00" stroke="#2e2e2e" stroke-width="2"></circle><path d="M6 10.2l2.8 2.4L14 7.4" fill="none" stroke="#2e2e2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></li>
+      <li class="ng"><svg aria-hidden="true" width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#2e2e2e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="26" height="26" rx="3.5"></rect><path d="M16.5 27.5h3"></path></svg><span>iPad</span><svg class="mk" aria-label="非対応" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#d9d9d9" stroke="#2e2e2e" stroke-width="2"></circle><path d="M7 7l6 6M13 7l-6 6" stroke="#2e2e2e" stroke-width="2" stroke-linecap="round"></path></svg></li>
+      <li class="ng"><svg aria-hidden="true" width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#2e2e2e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="8" width="23" height="15" rx="2"></rect><path d="M3 27.5h30"></path></svg><span>Mac</span><svg class="mk" aria-label="非対応" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#d9d9d9" stroke="#2e2e2e" stroke-width="2"></circle><path d="M7 7l6 6M13 7l-6 6" stroke="#2e2e2e" stroke-width="2" stroke-linecap="round"></path></svg></li>
+      <li class="ng"><svg aria-hidden="true" width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#2e2e2e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="3.5" width="16" height="29" rx="3"></rect><path d="M16 28.5h4"></path></svg><span>Android</span><svg class="mk" aria-label="非対応" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#d9d9d9" stroke="#2e2e2e" stroke-width="2"></circle><path d="M7 7l6 6M13 7l-6 6" stroke="#2e2e2e" stroke-width="2" stroke-linecap="round"></path></svg></li>
+     </ul>
+     <p class="notice-s">iOS 18以降・iPhone 12以降に対応（miniシリーズは対象外）</p>
+  </div>
+ </div>
+ <!-- PC幅だけ v3.33〜：黒いフッターの代わり。商標の注記 → 岩＋TOP（スマホ幅と同じひとまとまり・中央）→ ©。下は余裕を持って空ける：v3.34 -->
+ <div class="pc-end">
+  <p class="legal">iPhone、iPad、Mac、App Storeは、米国およびその他の国で登録されたApple Inc.の商標です。iPhone商標は、アイホン株式会社のライセンスに基づき使用されています。AndroidはGoogle LLCの商標です。</p>
+  <a class="pc-top" href="#top" aria-label="ページの先頭へ戻る"><img src="img/to-top-rock.webp" alt="" width="495" height="312"><span>TOP<svg aria-hidden="true" width="12" height="6" viewBox="0 0 12 6" fill="none"><path d="M1 5l5-4 5 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a>
+  <p class="copy">© 2026 あろわ７</p>
+ </div>
+</section>
+
+</main>
+<!-- 右（PC幅だけ）：ダウンロード用QR -->
+<aside class="side right" aria-label="ダウンロード">
+ <div class="side-stack">
+  <p class="bubble">DOWNLOAD</p>
+  <div class="side-card" style="padding: 20px 20px 22px; display: flex; flex-direction: column; align-items: center; gap: 12px">
+   <img src="img/qr-appstore.png" alt="App Storeのアイワナのページを開くQRコード" style="width: 136px; height: 136px">
+   <p style="margin: 0; font-size: 13px; font-weight: 700; line-height: 1.6; text-align: center">iPhoneのカメラで<br>読み取ってください</p>
+   <a class="dl-btn" href="https://apps.apple.com/app/id6790331914" style="width: 100%; height: 48px; font-size: 14px">App Storeで見る</a>
+   <p style="margin: 0; font-size: 12px; font-weight: 700; line-height: 1.6; text-align: center">iPhone専用（iOS 18以降）・無料<br><span style="font-weight: 500">iPad・Mac・Androidには非対応</span></p>
+  </div>
+ </div>
+</aside>
+<footer class="foot">
+   <a class="to-top" href="#top" aria-label="ページの先頭へ戻る"><img src="img/to-top-rock.webp" alt=""><span>TOP<svg aria-hidden="true" width="12" height="6" viewBox="0 0 12 6" fill="none"><path d="M1 5l5-4 5 4" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a>
+   <!-- アプリ名＋2列（確定） -->
+   <div class="in fv-a">
+    <div class="fa-brand"><img src="img/app-icon.png" alt=""><div><p class="fa-name">アイワナ｜購入検討記録</p><p class="fa-sub">iPhone専用（iOS 18以降）・無料</p></div></div>
+    <nav class="fa-links" aria-label="サポートと規約"><a href="support.html" data-goto>サポート<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M9 5l7 7-7 7"></path></svg></a><a href="privacy.html" data-goto>プライバシーポリシー<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M9 5l7 7-7 7"></path></svg></a><a href="https://docs.google.com/forms/d/e/1FAIpQLSeYzxMm0aLARxkDsGyXCwRQ1I5td704eaObtqfq3ke3TdoxKg/viewform">お問い合わせ<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M9 5l7 7-7 7"></path></svg></a><a href="terms.html" data-goto>利用規約<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M9 5l7 7-7 7"></path></svg></a></nav>
+    <a class="fa-x" href="https://x.com/aiwana_app"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" style="flex: none"><path d="M12.6 .75h2.454L9.694 6.892 16 15.25h-4.937L7.196 10.18 2.771 15.25H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.6.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" fill="currentColor"></path></svg>@aiwana_app</a>
+    <p class="legal">iPhone、iPad、Mac、App Storeは、米国およびその他の国で登録されたApple Inc.の商標です。iPhone商標は、アイホン株式会社のライセンスに基づき使用されています。AndroidはGoogle LLCの商標です。</p><p class="copy">© 2026 あろわ７</p>
+   </div>
+  </footer>
+</div>
+
+<!-- メニュー（スマホ幅）v3.19：ご主人様の Figma「iPhone 13 & 14 - 23」（290:1348）。ヘッダーの下から黄色い面が降りて画面を埋める。三本線は×になる。中でスクロールしない（低い画面では詰める。それでも収まらないときだけ中がスクロール） -->
+<div class="mnu" role="dialog" aria-modal="true" aria-label="メニュー" aria-hidden="true">
+    <button class="mnu-base" type="button" aria-label="メニューを閉じる" data-close-menu tabindex="-1"></button>
+    <div class="mnu-sheet">
+     <div class="mnu-body">
+      <nav class="mnu-nav" aria-label="ページ内メニュー"><a href="#top" data-close-menu><span class="eyebrow"><i></i>Top</span><span class="mnu-ja">ホーム</span></a><a href="#about" data-close-menu><span class="eyebrow"><i></i>About</span><span class="mnu-ja">アイワナってどんなアプリ？</span></a><a href="#features" data-close-menu><span class="eyebrow"><i></i>Feature</span><span class="mnu-ja">アイワナでできること</span></a><a href="#usecases" data-close-menu><span class="eyebrow"><i></i>Case</span><span class="mnu-ja">例えばこんな使い方</span></a><a href="#security" data-close-menu><span class="eyebrow"><i></i>Security</span><span class="mnu-ja">アイワナの安心設計</span></a><a href="#news" data-close-menu><span class="eyebrow"><i></i>News</span><span class="mnu-ja">最新情報</span></a></nav>
+      <nav class="mnu-sub" aria-label="サポートと規約"><a href="support.html" data-goto>サポート<svg aria-hidden="true" width="6" height="12" viewBox="0 0 6 12" fill="none" style="flex: none"><path d="M1 1l4 5-4 5" stroke="#2e2e2e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a href="privacy.html" data-goto>プライバシーポリシー<svg aria-hidden="true" width="6" height="12" viewBox="0 0 6 12" fill="none" style="flex: none"><path d="M1 1l4 5-4 5" stroke="#2e2e2e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a href="https://docs.google.com/forms/d/e/1FAIpQLSeYzxMm0aLARxkDsGyXCwRQ1I5td704eaObtqfq3ke3TdoxKg/viewform">お問い合わせ<svg aria-hidden="true" width="6" height="12" viewBox="0 0 6 12" fill="none" style="flex: none"><path d="M1 1l4 5-4 5" stroke="#2e2e2e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a href="terms.html" data-goto>利用規約<svg aria-hidden="true" width="6" height="12" viewBox="0 0 6 12" fill="none" style="flex: none"><path d="M1 1l4 5-4 5" stroke="#2e2e2e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></nav>
+      <a class="dl-btn mnu-dl" href="https://apps.apple.com/app/id6790331914">アプリをダウンロード</a>
+     </div>
+     <svg class="mnu-hem" viewBox="14 0 390 24" preserveAspectRatio="none" aria-hidden="true"><path d="M0 13.5C0 13.5 31.31 1.5 52.375 1.5C73.44 1.5 83.69 13.5 104.75 13.5C125.81 13.5 136.06 1.5 157.125 1.5C178.19 1.5 188.44 13.5 209.5 13.5C230.56 13.5 240.81 1.5 261.875 1.5C282.94 1.5 293.19 13.5 314.25 13.5C335.31 13.5 345.56 1.5 366.625 1.5C387.69 1.5 419 13.5 419 13.5 L419 0 L0 0 Z" fill="#ffbd00"></path><path d="M0 13.5C0 13.5 31.31 1.5 52.375 1.5C73.44 1.5 83.69 13.5 104.75 13.5C125.81 13.5 136.06 1.5 157.125 1.5C178.19 1.5 188.44 13.5 209.5 13.5C230.56 13.5 240.81 1.5 261.875 1.5C282.94 1.5 293.19 13.5 314.25 13.5C335.31 13.5 345.56 1.5 366.625 1.5C387.69 1.5 419 13.5 419 13.5" fill="none" stroke="#2e2e2e" stroke-width="3" vector-effect="non-scaling-stroke"></path></svg>
+     <svg class="mnu-hem mnu-hem-v" viewBox="0 0 24 1676" preserveAspectRatio="xMinYMin slice" aria-hidden="true"><g transform="translate(24 0) rotate(90)"><path d="M0 13.5 C0.00 13.5 31.31 1.5 52.375 1.5 C73.44 1.5 83.69 13.5 104.75 13.5 C125.81 13.5 136.06 1.5 157.125 1.5 C178.19 1.5 188.44 13.5 209.50 13.5 C230.56 13.5 240.81 1.5 261.875 1.5 C282.94 1.5 293.19 13.5 314.25 13.5 C335.31 13.5 345.56 1.5 366.625 1.5 C387.69 1.5 397.94 13.5 419.00 13.5 C440.06 13.5 450.31 1.5 471.375 1.5 C492.44 1.5 502.69 13.5 523.75 13.5 C544.81 13.5 555.06 1.5 576.125 1.5 C597.19 1.5 607.44 13.5 628.50 13.5 C649.56 13.5 659.81 1.5 680.875 1.5 C701.94 1.5 712.19 13.5 733.25 13.5 C754.31 13.5 764.56 1.5 785.625 1.5 C806.69 1.5 816.94 13.5 838.00 13.5 C859.06 13.5 869.31 1.5 890.375 1.5 C911.44 1.5 921.69 13.5 942.75 13.5 C963.81 13.5 974.06 1.5 995.125 1.5 C1016.19 1.5 1026.44 13.5 1047.50 13.5 C1068.56 13.5 1078.81 1.5 1099.875 1.5 C1120.94 1.5 1131.19 13.5 1152.25 13.5 C1173.31 13.5 1183.56 1.5 1204.625 1.5 C1225.69 1.5 1235.94 13.5 1257.00 13.5 C1278.06 13.5 1288.31 1.5 1309.375 1.5 C1330.44 1.5 1340.69 13.5 1361.75 13.5 C1382.81 13.5 1393.06 1.5 1414.125 1.5 C1435.19 1.5 1445.44 13.5 1466.50 13.5 C1487.56 13.5 1497.81 1.5 1518.875 1.5 C1539.94 1.5 1550.19 13.5 1571.25 13.5 C1592.31 13.5 1602.56 1.5 1623.625 1.5 C1644.69 1.5 1654.94 13.5 1676.00 13.5 L1676 0 L0 0 Z" fill="#ffbd00"></path><path d="M0 13.5 C0.00 13.5 31.31 1.5 52.375 1.5 C73.44 1.5 83.69 13.5 104.75 13.5 C125.81 13.5 136.06 1.5 157.125 1.5 C178.19 1.5 188.44 13.5 209.50 13.5 C230.56 13.5 240.81 1.5 261.875 1.5 C282.94 1.5 293.19 13.5 314.25 13.5 C335.31 13.5 345.56 1.5 366.625 1.5 C387.69 1.5 397.94 13.5 419.00 13.5 C440.06 13.5 450.31 1.5 471.375 1.5 C492.44 1.5 502.69 13.5 523.75 13.5 C544.81 13.5 555.06 1.5 576.125 1.5 C597.19 1.5 607.44 13.5 628.50 13.5 C649.56 13.5 659.81 1.5 680.875 1.5 C701.94 1.5 712.19 13.5 733.25 13.5 C754.31 13.5 764.56 1.5 785.625 1.5 C806.69 1.5 816.94 13.5 838.00 13.5 C859.06 13.5 869.31 1.5 890.375 1.5 C911.44 1.5 921.69 13.5 942.75 13.5 C963.81 13.5 974.06 1.5 995.125 1.5 C1016.19 1.5 1026.44 13.5 1047.50 13.5 C1068.56 13.5 1078.81 1.5 1099.875 1.5 C1120.94 1.5 1131.19 13.5 1152.25 13.5 C1173.31 13.5 1183.56 1.5 1204.625 1.5 C1225.69 1.5 1235.94 13.5 1257.00 13.5 C1278.06 13.5 1288.31 1.5 1309.375 1.5 C1330.44 1.5 1340.69 13.5 1361.75 13.5 C1382.81 13.5 1393.06 1.5 1414.125 1.5 C1435.19 1.5 1445.44 13.5 1466.50 13.5 C1487.56 13.5 1497.81 1.5 1518.875 1.5 C1539.94 1.5 1550.19 13.5 1571.25 13.5 C1592.31 13.5 1602.56 1.5 1623.625 1.5 C1644.69 1.5 1654.94 13.5 1676.00 13.5" fill="none" stroke="#2e2e2e" stroke-width="3" vector-effect="non-scaling-stroke"></path></g></svg>
+    </div>
+</div>
+<script src="js/main.js?v=3.45"></script>
+</body>
+</html>
+
+</body></html>
