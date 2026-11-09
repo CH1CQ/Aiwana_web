@@ -324,7 +324,7 @@ html.mnu-lock{overflow:hidden}
 .side-card{width:100%;max-width:232px;box-sizing:border-box;background:#ffffff;border:2.5px solid var(--ink);border-radius:16px}
 /* 背景：薄青1色（v3.47。水草（v3.37〜v3.46）・泳ぐアロワナ3匹（v3.28〜v3.30）・下から上がる泡（〜v3.28）はすべてやめた） */
 /* PC幅のヘッダー（ADAY）：画面の幅いっぱい・背景なし。左にロゴ、右に白い丸の三本線。常に出ている（スクロールで隠さない）。メニュー（z25）より上に置き、×で閉じられるようにする */
-.phdr{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;align-items:flex-start;justify-content:space-between;padding:44px 40px;box-sizing:border-box;pointer-events:none} /* v3.47：ロゴは三本線の上端（44px）に揃える（v3.46 までは丸の中心に揃えていて9px低かった） */
+.phdr{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;align-items:flex-start;justify-content:space-between;padding:24px 40px 44px;box-sizing:border-box;pointer-events:none} /* v3.48：上24px（v3.47 までは ADAY の実測どおり44px。ご主人様「画面の上と間隔あいてるから詰めて」） */ /* v3.47：ロゴは三本線の上端（44px）に揃える（v3.46 までは丸の中心に揃えていて9px低かった） */
 .phdr.hide{transform:none}
 .phdr>*{pointer-events:auto}
 .phdr-logo{display:block;line-height:0}
