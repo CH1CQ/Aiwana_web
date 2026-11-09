@@ -21,7 +21,7 @@ img{display:block;max-width:100%}
 /* 骨格：スマホ幅は1列。PC幅は 両脇｜本体390px｜両脇 の3列＋下にフッター */
 .layout{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr)}
 .col{position:relative;min-width:0;background:#ffffff;overflow-x:clip}
-.side,.bg-layer,.phdr{display:none}
+.side,.phdr{display:none}
 
 /* ===== 共通の部品 ===== */
 .eyebrow{margin:0;display:flex;align-items:center;gap:4px;font-size:14px;font-weight:700;letter-spacing:.12em;line-height:20px}
@@ -291,10 +291,7 @@ html.mnu-lock{overflow:hidden}
 /* ===== PC幅 v3.28（2026-11-09・ご主人様「ADAYみたいに」）=====
    構成：左＝画面に固定した面（魚・キャッチコピー・ロゴ・ダウンロード。下にFOLLOW US）／右寄り＝スマホ幅の本体390px（上の角丸40・影）／右端＝余白（画面幅の12%・ADAYの実測 278/2316）。背景は薄青のまま（泳ぐアロワナと泡も残す）。
    ADAYの実測（2316×1271）：右の本体440px・右余白278px・上20px・角丸48、左の面は sticky で画面の高さいっぱい、犬202×145→小さなコピー16px→ロゴ70px→ボタン340×82、下にSNS。ヘッダー＝ロゴ（左40px）＋白い丸の三本線56px（右40px・上44px）。メニュー＝右半分・角丸40px 0 0 40px・幕 rgba(0,0,0,.4)・0.3秒 cubic-bezier(.4,.4,0,1) */
-:root{--pc-right:clamp(128px, 12vw, 280px); /* 右の余白の最小を128px（v3.42。1000〜1066px で三本線の泡が本体から10px離れるように。1067px以上は12vwのまま） */
- /* 水草（v3.39）：高さは画面の64%（最大660px）。幅は画像の比（アセット48：440/1402＝0.3139。v3.40）。1280px以上は画面の左端から clamp(24px,3vw,64px)。1280px未満は本体の左端から698px左（＝1280pxのときの距離）に固定し、本体と一緒に左へ動いて画面の外へ出る */
- --plant-h:min(64vh, 660px); --plant-w:calc(min(64vh, 660px) * 0.3139); --plant-left:clamp(24px, 3vw, 64px); --plant-right:calc(var(--plant-left) + var(--plant-w))}
-@media (max-width:1279px){:root{--plant-left:calc(100vw - 390px - var(--pc-right) - 698px)}}
+:root{--pc-right:clamp(128px, 12vw, 280px)} /* 右の余白の最小は128px（v3.42。1000〜1066px で三本線の泡が本体から10px離れるように。1067px以上は12vw） */
 .page{padding-top:0;background:var(--blue)}
 .hdr{display:none}
 .layout{grid-template-columns:minmax(0,1fr) 390px var(--pc-right)}
@@ -302,8 +299,8 @@ html.mnu-lock{overflow:hidden}
 .fv,.art{border-radius:40px 40px 0 0}
 /* 左の面：画面に固定。中身は上下中央、FOLLOW US は下 */
 .side{display:block;position:relative}
-/* 左の面（v3.39）：中身（魚〜リンク）は「水草の右端〜本体の左端」の中央。水草が画面の外に出たら「画面の左端〜本体の左端」の中央 */
-.side-stack{position:fixed;top:0;left:0;bottom:0;width:calc(100% - 390px - var(--pc-right));box-sizing:border-box;padding:120px 0 60px max(0px, var(--plant-right));display:flex;flex-direction:column;align-items:center;justify-content:center}
+/* 左の面：中身（魚〜リンク）は面の中央（v3.47 で v3.38 までの形に戻した。水草はやめた） */
+.side-stack{position:fixed;top:0;left:0;bottom:0;width:calc(100% - 390px - var(--pc-right));box-sizing:border-box;padding:120px 40px 60px;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .side.right .side-stack{display:none}
 .hero{display:flex;flex-direction:column;align-items:center;text-align:center}
 /* 魚（吹き出しなし・240px）：KVと同じふよふよ。口（左）から泡が3つ、上へ上がって消える（2.6秒・ずらして） */
@@ -325,22 +322,17 @@ html.mnu-lock{overflow:hidden}
 .hero-links{margin-top:24px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px}
 .hero-links a{position:relative;font-size:14px;font-weight:700;letter-spacing:.04em;line-height:20px;color:var(--ink);text-decoration:none} /* 14px（v3.41。v3.33〜は12px） */
 .side-card{width:100%;max-width:232px;box-sizing:border-box;background:#ffffff;border:2.5px solid var(--ink);border-radius:16px}
-/* 背景（v3.37）：薄青＋左下に水草（ご主人様のイラスト・アセット48）。泳ぐアロワナ3匹（v3.28〜v3.30）と下から上がる泡（〜v3.28）はやめ、v3.43 で要素ごと消した */
-.bg-layer{display:block;position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.bg-plant{position:absolute;left:var(--plant-left);bottom:-6px;height:var(--plant-h);width:auto} /* v3.39：急に消さず、1280px未満は本体と一緒に左へ（.bg-layer の overflow:hidden で画面の外は切れる） */
-/* 消え際（v3.44・ご主人様 iPad 12.9縦で葉先だけ見えた）：見えている幅が全体の60%を切ったら薄くし始め、10%で0。割り算は tan(atan2()) で（iOS 15.4／Chrome 111 以降。未対応では今までどおり1） */
-.bg-plant{opacity:clamp(0, tan(atan2(var(--plant-right) - var(--plant-w) * 0.1, var(--plant-w) * 0.5)), 1)}
+/* 背景：薄青1色（v3.47。水草（v3.37〜v3.46）・泳ぐアロワナ3匹（v3.28〜v3.30）・下から上がる泡（〜v3.28）はすべてやめた） */
 /* PC幅のヘッダー（ADAY）：画面の幅いっぱい・背景なし。左にロゴ、右に白い丸の三本線。常に出ている（スクロールで隠さない）。メニュー（z25）より上に置き、×で閉じられるようにする */
-.phdr{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:44px 40px;box-sizing:border-box;pointer-events:none}
+.phdr{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;align-items:flex-start;justify-content:space-between;padding:44px 40px;box-sizing:border-box;pointer-events:none} /* v3.47：ロゴは三本線の上端（44px）に揃える（v3.46 までは丸の中心に揃えていて9px低かった） */
 .phdr.hide{transform:none}
 .phdr>*{pointer-events:auto}
 .phdr-logo{display:block;line-height:0}
 .phdr-logo img{width:101px;height:38px}
 .phdr-r{display:none}
 .phdr-burger{position:relative;width:56px;height:56px;border-radius:50%;background:#ffffff;border:3px solid var(--ink);box-sizing:border-box;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
-/* 泡3つ（v3.37・ご主人様の画像）：丸84px基準の位置を56pxに換算。左上22px・右下26px・下14px。線は丸・泡とも3px（v3.41。v3.38〜v3.40 は2.5px）、丸と泡・泡同士は少し離す（v3.38）。丸の縁より手前に描く。押せる範囲は丸だけ */
-.phdr-burger::before,.phdr-burger::after,.phdr-burger .bub{content:"";position:absolute;box-sizing:border-box;border-radius:50%;background:#ffffff;border:3px solid var(--ink);pointer-events:none}
-.phdr-burger::before{width:22px;height:22px;left:-22px;top:-14px}
+/* 泡（v3.37・ご主人様の画像）：丸84px基準の位置を56pxに換算。右下26px・下14px（左上の22pxは v3.47 で外した）。線は丸・泡とも3px（v3.41。v3.38〜v3.40 は2.5px）、丸と泡・泡同士は少し離す（v3.38）。丸の縁より手前に描く。押せる範囲は丸だけ */
+.phdr-burger::after,.phdr-burger .bub{content:"";position:absolute;box-sizing:border-box;border-radius:50%;background:#ffffff;border:3px solid var(--ink);pointer-events:none}
 .phdr-burger::after{width:26px;height:26px;left:48px;top:42px}
 .phdr-burger .bub{width:14px;height:14px;left:24px;top:66px}
 /* 三本線の線（PC幅）：3px（v3.40・ご主人様「もう1太く」。スマホ幅は2pxのまま）。×のときの寄せ幅は線3＋間6＝9px */
