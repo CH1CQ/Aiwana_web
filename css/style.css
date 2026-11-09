@@ -211,9 +211,10 @@ img{display:block;max-width:100%}
    画面の高さ740px未満（Safariのツールバーが出ている間の iPhone 12〜14 など）は余白を詰め、それでも収まらない低い画面だけ中がスクロールする */
 .mnu{position:fixed;inset:0;z-index:25;visibility:hidden;transition:visibility 0s linear .3s}
 .mnu.open{visibility:visible;transition:visibility 0s}
+.mnu.show{visibility:visible;transition:none} /* v3.50：開く直前に先に見える状態にする（面は画面の外）。次の描画で .open を付けて動かす（iPad で動きが出なかった対策①） */
 .mnu-base{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;border:0;background:rgba(0,0,0,0.4);cursor:pointer;opacity:0;transition:opacity .3s var(--ease)}
 .mnu.open .mnu-base{opacity:1;transition:opacity .5s var(--ease)}
-.mnu-sheet{position:absolute;left:0;right:0;top:var(--hdr);height:calc(100% - var(--hdr));background:var(--yel);transform:translateY(calc(-100% - 24px));transition:transform .3s var(--ease)}
+.mnu-sheet{position:absolute;left:0;right:0;top:var(--hdr);height:calc(100% - var(--hdr));background:var(--yel);transform:translateY(calc(-100% - 24px));transition:transform .3s var(--ease);will-change:transform} /* will-change：面の層を常に用意しておく（iPad 対策②） */
 .mnu.open .mnu-sheet{transform:translateY(0);transition:transform .5s var(--ease)}
 /* v3.49：面の移動は translate プロパティではなく transform で書く（iPad で動きが出なかった。transform の方が古い WebKit でも確実に補間される） */
 .mnu.now,.mnu.now .mnu-base,.mnu.now .mnu-sheet{transition:none}
@@ -349,7 +350,10 @@ html.mnu-lock .phdr-logo{filter:brightness(.6)} /* v3.49：メニューが開い
 .mnu.open .mnu-base{transition:opacity .3s var(--ease)}
 .mnu-hem{display:none}
 .mnu-hem-v{display:block;position:absolute;top:0;right:100%;left:auto;width:24px;height:100%;pointer-events:none} /* 左の縁の波（スマホ幅の縁と同じ形を縦に） */
-.mnu-body{padding:120px 45px 40px}
+.mnu-body{padding:24px 45px 40px}
+/* v3.50：ダウンロードボタンを一番上（×の横・左揃え・上24pxで×と同じ高さ）に。項目はその40px下（上端120pxは v3.49 までと同じ） */
+.mnu-dl{order:-1;margin:0;align-self:flex-start}
+.mnu-nav{margin-top:40px}
 /* フッター：本体（390px）の下にスマホ幅のまま置く（ADAY）。本体と同じ影、下の角丸 */
 /* フッター（v3.33）：PC幅では黒いフッターを出さない（ADAY）。リンクは左の面（.hero-links）、商標の注記・©・TOPは本体の最後のセクションの末尾（.pc-end） */
 .foot{display:none}

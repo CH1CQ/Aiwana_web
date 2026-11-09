@@ -1,4 +1,4 @@
-/* アイワナ公式サイト v3.49：動きのJavaScript
+/* アイワナ公式サイト v3.50：動きのJavaScript
    ・ページ切り替え（ADAY）・メニュー（スマホ幅。v3.19：ヘッダーの下から降りる黄色い面＋三本線→×）
    ・ヘッダー（スマホ幅）：白／黄色の2枚。出ている方が上へ引っ込んでから、次の方が上から出る（0.3秒ずつ・速さは一定）。Caseの固定中はどちらも出さない
    ・ヘッダー（PC幅）：下へスクロールで隠れ、上へで出る（みんなの銀行）。両脇はフッターが画面の高さの85%まで上がると消える
@@ -103,10 +103,13 @@
     clearTimeout(timer);
     menuOpen = true;
     menu.classList.remove('now');
-    menu.classList.add('open');
+    // v3.50：先に .show（見える状態・面は画面の外）にして1〜2フレーム置き、次の描画で .open を付ける。
+    // 見えない状態から一度に動かすと iPad で途中の絵が描かれず一瞬で出ていたため
+    menu.classList.add('show');
     menu.setAttribute('aria-hidden', 'false');
     document.documentElement.classList.add('mnu-lock');
     setBurgers(true);
+    requestAnimationFrame(() => requestAnimationFrame(() => { if (menuOpen) menu.classList.add('open'); }));
   }
   function closeMenu(immediate) {
     if (!menu || !menuOpen) return;
@@ -114,6 +117,7 @@
     menuOpen = false;
     if (immediate === true) { menu.classList.add('now'); timer = setTimeout(() => menu.classList.remove('now'), 50); }
     menu.classList.remove('open');
+    menu.classList.remove('show');
     menu.setAttribute('aria-hidden', 'true');
     document.documentElement.classList.remove('mnu-lock');
     setBurgers(false);
